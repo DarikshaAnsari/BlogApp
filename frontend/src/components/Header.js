@@ -24,10 +24,6 @@ const Header = () => {
       </Tabs>
       </Box>}
       <Box display="flex" marginLeft="auto">
-       {!isLoggedIn && <>
-       <Button variant="contained" sx={{margin:1 ,borderRadius:10}} LinkComponent={Link} to="/auth">Login</Button>
-       <Button variant="contained" sx={{margin:1 ,borderRadius:10}} LinkComponent={Link} to="/auth">SignUp</Button>
-       </>}
        {isLoggedIn && <Button variant="contained" sx={{margin:1 ,borderRadius:10}} LinkComponent={Link} to="/" onClick={()=>dispath(authActions.logout())}>Logout</Button>} 
       </Box>
     </Toolbar>
